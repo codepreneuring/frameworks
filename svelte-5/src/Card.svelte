@@ -10,11 +10,10 @@
 
 <style>
     .container {
-        width: 300px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border: 1px solid lightgray;
         border-radius: 5px;
-
         display: flex;
         flex-direction: column;
     }

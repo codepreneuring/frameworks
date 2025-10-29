@@ -6,12 +6,9 @@ import { Component, computed, signal } from '@angular/core';
   template: `
     <button (click)="generateRandomNumber()">Random</button>
     <br />
-    <br />
     number: {{ randomNumber() }}
     <br />
-    <br />
     Even: {{ isEven() }}
-    <br />
     <br />
     Doubled: {{ doubled() }}
   `,

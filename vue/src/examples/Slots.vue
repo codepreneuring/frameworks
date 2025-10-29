@@ -32,11 +32,3 @@
 <script setup>
 import Slot from "./Slot.vue";
 </script>
-
-<style scoped>
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-</style>

@@ -1,7 +1,7 @@
 export default function Css() {
     const styles = {
         span: {
-            fontSize: "40px",
+            fontSize: "30px",
         },
         trash: {
             color: "blue",

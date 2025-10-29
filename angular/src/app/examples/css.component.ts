@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   styles: [
     `
       span {
-        font-size: 40px;
+        font-size: 30px;
       }
 
       .trash {

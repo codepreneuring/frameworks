@@ -1,30 +1,27 @@
 export default function Card({ header, body }) {
+    const styles = {
+        container: {
+            width: "250px",
+            height: "250px",
+            border: "1px solid lightgray",
+            borderRadius: "5px",
+            dispay: "flex",
+            flexDirection: "column",
+        },
+        header: {
+            fontSize: "30px",
+            fontWeight: "bold",
+            padding: "20px 20px 0px 20px",
+        },
+        body: {
+            padding: "20px",
+        },
+    };
+
     return (
-        <>
-            <div className="container">
-                <span className="header">{header}</span>
-                <div className="body">{body}</div>
-            </div>
-
-            <style jsx>{`
-                .container {
-                    width: 300px;
-                    height: 200px;
-                    border: 1px solid lightgray;
-                    padding: 20px;
-                    overflow: auto;
-                    border-radius: 5px;
-
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                }
-
-                .header {
-                    font-size: 30px;
-                    font-weight: bold;
-                }
-            `}</style>
-        </>
+        <div style={styles.container}>
+            <span style={styles.header}>{header}</span>
+            <div style={styles.body}>{body}</div>
+        </div>
     );
 }
