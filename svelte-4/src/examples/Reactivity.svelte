@@ -7,6 +7,10 @@
 
     $: isEven = randomNumber % 2 == 0;
     $: doubled = randomNumber * randomNumber;
+
+    $: {
+        console.log(randomNumber);
+    }
 </script>
 
 <button on:click={generateRandomNumber}>Random</button>

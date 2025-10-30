@@ -1,22 +1,39 @@
 <template>
-    <button @click="generateRandomNumber">Random</button>
-    <br />
-    number: {{ randomNumber }}
-    <br />
-    Even: {{ isEven }}
-    <br />
-    Doubled: {{ doubled }}
+    <div>
+        <button @click="generateRandomNumber">Random</button>
+        <br />
+        number: {{ randomNumber }}
+        <br />
+        Even: {{ isEven }}
+        <br />
+        Doubled: {{ doubled }}
+    </div>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
+<script>
+import { ref, computed, watch } from "vue";
 
-const randomNumber = ref("");
+export default {
+    setup() {
+        const randomNumber = ref("");
 
-function generateRandomNumber() {
-    randomNumber.value = Math.round(Math.random() * 100);
-}
+        function generateRandomNumber() {
+            randomNumber.value = Math.round(Math.random() * 100);
+        }
 
-const isEven = computed(() => randomNumber.value % 2 === 0);
-const doubled = computed(() => randomNumber.value * randomNumber.value);
+        const isEven = computed(() => randomNumber.value % 2 === 0);
+        const doubled = computed(() => randomNumber.value * randomNumber.value);
+
+        watch(randomNumber, (newValue) => {
+            console.log(newValue);
+        });
+
+        return {
+            randomNumber,
+            generateRandomNumber,
+            isEven,
+            doubled,
+        };
+    },
+};
 </script>

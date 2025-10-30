@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-reactivity',
@@ -29,4 +29,10 @@ export class ReactivityComponent {
     const num = this.randomNumber();
     return typeof num === 'number' ? num * num : 0;
   });
+
+  constructor() {
+    effect(() => {
+      console.log(this.randomNumber());
+    });
+  }
 }

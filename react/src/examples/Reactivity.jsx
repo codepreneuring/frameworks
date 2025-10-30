@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Reactivity() {
     const [randomNumber, setRandomNumber] = useState("");
@@ -9,6 +9,10 @@ export default function Reactivity() {
 
     const isEven = randomNumber % 2 === 0;
     const doubled = randomNumber * randomNumber;
+
+    useEffect(() => {
+        console.log(randomNumber);
+    }, [randomNumber]);
 
     return (
         <div>
